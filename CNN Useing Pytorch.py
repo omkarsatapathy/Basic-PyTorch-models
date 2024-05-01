@@ -68,16 +68,16 @@ for epoch in range(Epochs):
 
 
 #-------------------------Test the model-------------------------------#
-#
-# correct = 0,
-# total = 0
-#
-# for i, (images, labels) in enumerate(test_dataloader):
-#     output = model (images)
-#     _, predicted = torch.max(output.data, 1)
-#     correct += (predicted == labels).sum().item()
-#     total += labels.size(0)
-#
-#
-# accuracy = correct / total * 100
-# print(accuracy)
+
+correct = 0,
+total = 0
+
+for i, (images, labels) in enumerate(test_dataloader):
+    output = model (images)
+    _, predicted = torch.max(output.data, 1)
+    correct += (predicted == labels).sum().item()
+    total += labels.size(0)
+
+
+accuracy = correct / total * 100
+print(accuracy)
